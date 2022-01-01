@@ -1,0 +1,22 @@
+<%- include('header');-%>
+<body>
+  <div class="box" id="heading">
+    <h1><%=header %> </h1>
+  </div>
+
+  <div class="box">
+    <% items.forEach(function(i){ %>
+
+      <div class="item">
+        <input type="checkbox">
+        <p><%=i %></p>
+  </div>
+    <% })%>
+
+
+  <form action="/" method="post">
+    <input type="text" name="toDo" placeholder="Enter New Item">
+    <button type="submit" name="sub" value=<%=header %>> +</button>
+  </form>
+</div>
+<%- include('footer'); -%>
